@@ -92,6 +92,14 @@ body {
     z-index: 10;
 }
 
+.logo-img {
+    width: 240px;
+    height: 240px;
+    left: 0px;
+    top: -50px;
+    position: absolute;
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -287,6 +295,10 @@ body {
 .features-header p {
     color: var(--text-muted);
     font-size: 1rem;
+    line-height: 1.6;
+        margin-bottom: 30px;
+        max-width: 500px;
+        margin: 0 auto;
 }
 
 .features-grid {
@@ -402,6 +414,107 @@ body {
     color: #fff;
 }
 
+/* Talents Section */
+.talents {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.talents-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.talents-text {
+    flex: 0.35;
+    position: sticky;
+    top: 100px;
+}
+
+.talents-text h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.talents-text p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 12px 30px;
+}
+
+.talents-grid {
+    flex: 0.65;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.talent-card {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.talent-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.talent-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.talent-tag {
+    display: inline-block;
+    background-color: #6d0000;
+    /* Darker red matching design */
+    color: #ffcccc;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.talent-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.talent-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.talent-link:hover {
+    color: #fff;
+}
 /* Responsive */
 @media (max-width: 768px) {
     .header {
@@ -483,4 +596,20 @@ body {
         flex-direction: column;
         align-items: center;
     }
+/* Talents Stack */
+.talents-container {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.talents-text {
+    width: 100%;
+    position: static;
+    text-align: center;
+}
+
+.talents-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+}
 }
